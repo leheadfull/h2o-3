@@ -16,7 +16,7 @@ permissions:
 jobs:
   snyk_scan_test:
     if: ${{ github.event_name == 'push' }}
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@master
         with:
