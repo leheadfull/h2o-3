@@ -6,3 +6,5 @@ doc = dict(
 Builds a Decision Tree (DT) on a preprocessed dataset.
 """
 )
+examples = dict(
+    
