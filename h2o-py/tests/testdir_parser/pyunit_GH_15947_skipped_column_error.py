@@ -3,7 +3,7 @@ sys.path.insert(1,"../../")
 import h2o
 from tests import pyunit_utils
 
-# Seb has reported that skipped_columns does not work here
+# Seb has reported that skipped_columns does not work if skipped_columns is called with h2o.H2OFrame
 def test_skipped_columns():
     data = [[1, 4, "a",  1], [2, 5, "b",  0], [3, 6, "", 1]]
     frame = h2o.H2OFrame(data, skipped_columns=[1, 2])
