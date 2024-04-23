@@ -4109,6 +4109,7 @@ use.package <- function(package,
 #'
 #' @param x An \code{R} object.
 #' @param destination_frame A string with the desired name for the H2OFrame
+#' @param skipped_columns A list of integer containing columns to be skipped and not parsed into the final frame
 #' @param use_datatable allow usage of data.table
 #' @param \dots arguments passed to method arguments.
 #' @export
