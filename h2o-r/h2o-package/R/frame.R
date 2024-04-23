@@ -4163,7 +4163,7 @@ as.h2o.default <- function(x, destination_frame="", skipped_columns=NULL, ...) {
 #' @rdname as.h2o
 #' @method as.h2o H2OFrame
 #' @export
-as.h2o.H2OFrame <- function(x, destination_frame="", ...) {
+as.h2o.H2OFrame <- function(x, destination_frame="", skipped_columns=NULL, ...) {
   if( destination_frame=="" ) {
     subx <- destination_frame.guess(deparse(substitute(x)))
     destination_frame <- .key.make(if(nzchar(subx)) subx else "H2OFrame_copy")
@@ -4221,7 +4221,7 @@ as.h2o.data.frame <- function(x, destination_frame="", use_datatable=TRUE, skipp
 #' To speedup execution time for large sparse matrices, use h2o datatable.  Make sure you have installed and imported data.table and slam packages.
 #' Turn on h2o datatable by options("h2o.use.data.table"=TRUE)
 #' @export
-as.h2o.Matrix <- function(x, destination_frame="", use_datatable=TRUE, ...) {
+as.h2o.Matrix <- function(x, destination_frame="", skipped_columns=NULL, use_datatable=TRUE, ...) {
   if( destination_frame=="") {
     subx <- destination_frame.guess(deparse(substitute(x)))
     destination_frame <- .key.make(if(nzchar(subx)) subx else "Matrix")
