@@ -4178,7 +4178,7 @@ as.h2o.H2OFrame <- function(x, destination_frame="", skipped_columns=NULL, ...) 
 #' @seealso \code{\link{use.package}}
 #' @references \url{https://h2o.ai/blog/2016/fast-csv-writing-for-r/}
 #' @export
-as.h2o.data.frame <- function(x, destination_frame="", use_datatable=TRUE, skipped_columns=NULL, ...) {
+as.h2o.data.frame <- function(x, destination_frame="", skipped_columns=NULL, use_datatable=TRUE, ...) {
   if( destination_frame=="" ) {
     subx <- destination_frame.guess(deparse(substitute(x)))
     destination_frame <- .key.make(if(nzchar(subx)) subx else "data.frame")
