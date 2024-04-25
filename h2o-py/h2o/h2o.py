@@ -874,7 +874,7 @@ def parse_setup(raw_frames, destination_frame=None, header=0, separator=None, co
             if ((len(column_names)-len(skipped_columns)) != parse_column_len) and (len(column_names) != parse_column_len):
                 raise ValueError(
                     "length of col_names minus lenght of skipped_columns should equal the number of columns parsed: "
-                    "%d vs %d" % ((len(column_names)-len(skipped_columns), parse_column_len))
+                    "%d vs %d" % ((len(column_names)-len(skipped_columns), parse_column_len)))
         else:
             if len(column_names) != len(j["column_types"]): raise ValueError(
                 "length of col_names should be equal to the number of columns: %d vs %d"
